@@ -1,11 +1,3 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "dev/stdin" : "run/input.txt";
-const input = fs.readFileSync(filePath).toString().trim().split("\n");
-
-let [n, strings] = input;
-n = parseInt(n);
-strings = strings.split(" ").map(Number);
-
 function solution(count, towers) {
   let stack = [];
   let answer = new Array(count).fill(0);
@@ -26,5 +18,8 @@ function solution(count, towers) {
 
   console.log(answer.join(" "));
 }
+
+const n = 5;
+const strings = [6, 9, 5, 7, 4];
 
 solution(n, strings);
