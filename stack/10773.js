@@ -1,7 +1,3 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "dev/stdin" : "run/input.txt";
-const input = fs.readFileSync(filePath).toString().trim().split("\n");
-
 let stack = [];
 let answer = 0;
 
@@ -23,4 +19,6 @@ function solution(input) {
   console.log(answer);
 }
 
+const input = [4, 3, 0, 4, 0];
+const input2 = [10, 1, 3, 5, 4, 0, 0, 7, 0, 0, 6];
 solution(input);
