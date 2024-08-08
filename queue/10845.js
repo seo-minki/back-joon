@@ -1,7 +1,3 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "dev/stdin" : "run/input.txt";
-const input = fs.readFileSync(filePath).toString().trim().split("\n");
-
 class Queue {
   constructor() {
     this.item = [];
@@ -61,5 +57,24 @@ function solution(commandList) {
 
   console.log(answer.join(" "));
 }
+
+const input = [
+  "15",
+  "push 1",
+  "push 2",
+  "front",
+  "back",
+  "size",
+  "empty",
+  "pop",
+  "pop",
+  "pop",
+  "size",
+  "empty",
+  "pop",
+  "push 3",
+  "empty",
+  "front",
+];
 
 solution(input);
